@@ -1,0 +1,21 @@
+---
+layout: default
+---
+&nbsp;
+<a href='/blog.html'> Blog</a>
+
+<h2 align="middle">{{ page.title }}</h2>
+
+<p class="author"> {{ page.author | default: site.author }} <br> {{ page.date | date: "%-d %B %Y" }} </p>
+
+{% if page.abstract %}
+<div class="abstract">
+  <h3>Abstract</h3>
+  <p>{{page.abstract}}</p>
+</div>
+{% endif %}
+
+{{content}}
+
+<br />
+<br />
