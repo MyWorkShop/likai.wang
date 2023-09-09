@@ -14,8 +14,12 @@
 <body>
   <div class="wrapper">
     {% if page.title != 'Home' %}
-    <a href="{{ "/" | absolute_url }}"> Home</a>
+    <a href="{{ "/" | absolute_url }}">Home</a>
     {% endif %}
+    {% if page.title != 'About' %}
+    <span style="float:right;"><a href="/about.html">About</a></span>
+    {% endif %}
+    <br />
 
     {{ content }}
 

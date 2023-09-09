@@ -3,16 +3,13 @@ layout: default
 title: Home
 ---
 
+# Likai Wang
 
-{% for post in site.posts %}
-{% if post.single %}
-<img src="{{ post.preview }}" data-action="zoom">
+{% for project in site.projects %}
+{% if project.single %}
+<img src="{{ project.preview }}" data-action="zoom">
 {% else %}
-<a href="{{ post.url }}">
-  <img src="{{ post.preview }}">
-  <!-- {{ post.title }} -->
-  </a>
+<a href="{{ project.url }}"><img src="{{ project.preview }}"></a>
 <br />
 {% endif %}
 {% endfor %}
-<br />
